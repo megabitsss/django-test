@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    font-family: Outfit,Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.crea-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 80px 1.5rem 80px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.easybook-logo {
+    font-size: 48px; 
+    font-weight: 700;
+  }
+
+.container {
+    height: 7rem;
+    display: flex;
+    align-items: center;
+}
+
+.head-text {
+    color: #2baf2b;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.creative-head, .peer1-head {
+    font-size: 70px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.table-infor {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    width: 80%;
+    border-spacing: 0;
+}
+
+th {
+    height: 70px;
+    border-bottom: 3px solid rgb(0, 0, 0);
+    font-size: 25px;
+}
+
+.id-th {
+    color: white;
+    background-color: #2255A4;
+    border-top-left-radius: 50px;
+}
+
+.name-th {
+    color: white;
+    background-color: #FE6612;
+}
+
+.date-th {
+    color: white;
+    background-color: #ffa000;
+    border-top-right-radius: 50px;
+}
+
+td {
+    font-size: 20px;
+    text-align: center;
+    height: 60px;
+    border-bottom: 1px solid black;
+}
+
+.back-button {
+    width: 120px;
+    height: 60px;
+    font-size: 25px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+    margin-left: 5rem;
+    box-shadow: 20px 20px 50px 15px #FE6612 inset;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    scale: 1.15;
+    transition: all 0.1s ease-in-out;
+}

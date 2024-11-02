@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/creative.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <title>Check Rerservation</title>
+</head>
+<body>
+    <nav class="crea-nav">
+        <a href="https://www.it.kmitl.ac.th/th/" target="_blank">
+          <img class="it-logo" src="{% static 'img/IT logo.svg' %}">
+        </a>
+        <div class="easybook-logo">
+          <a href="https://github.com/KhanunKup/PSCP-PROJECT-Y1" target="_blank" style="text-decoration: none;">
+            <span style="color: #2255A4;">EASY</span><span style="color: #FE6612;">BOOK</span>
+          </a>
+        </div>
+    </nav>
+
+    <div class="container">
+      <a href = "index.html"><button class="back-button">BACK</button></a>
+    </div>
+
+    <div class="infor-form">
+        <h1 class="head-text"><b><span style="color: #2255A4;">Creative</span> and <span style="color: #FE6612;">Ideation 1</span></b></h1>
+    </div>
+
+    <div class="error-mess">
+      {% if messages %}
+            {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+      {% endif %}
+    </div>
+    
+    <div class="form-input">
+
+      <div class="box-input">
+
+          <form method="post" action="creative.html" class="form-section">
+            {% csrf_token %}
+
+            <label for="st-id"><b>Student ID</b></label>
+            <input type="text" class="stu-css" name="student-id-form" placeholder="Enter your student ID..." required>
+
+            <label for="st-name"><b>Name</b></label>
+            <input type="text" class="name-css" name="name-form" placeholder="Enter your name..." required>
+
+            <label for="st-date"><b>Date & Time</b></label>
+            <p>Can't be booked more than 3 hours</p>
+            <input type="date" class="date-css" name="date-form" required>
+            <input type="time" class="start-date-css" name="start-date-form" required>
+            <input type="time" class="end-date-css" name="end-date-form" required>
+            
+            <div class="submit-section">
+              <input type="submit" class="submit-button">
+            </div>
+          </form>
+      </div>
+    </div>
+
+
+    <footer class="footer-container">
+      <div class="copy-right">
+        @EASYBOOK
+      </div>
+      <div class="author">     
+        <div class="author-spec">
+          Made by
+          <a href="https://github.com/KhanunKup" target="_blank" style="text-decoration: none;">@KhanunKup</a> &
+          <a href="https://github.com/Au4uztOLsen" target="_blank" style="text-decoration: none;">@Au4uztOLsen</a> &
+          <a href="https://github.com/EFeriTE" target="_blank" style="text-decoration: none;">@EFeriTE</a> &
+          <a href="https://github.com/megabitsss" target="_blank" style="text-decoration: none;">@megabitsss</a> &
+          <a href="https://github.com/Krjamwat" target="_blank" style="text-decoration: none;">@Krjamwat</a>
+        </div>
+      </div>
+    </footer>
+
+</body>
+</html>
